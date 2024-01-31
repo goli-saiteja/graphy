@@ -1,0 +1,76 @@
+@import "global";
+
+.header-container {
+    background-color: white;
+    height: $header-height;
+    color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 8px 8px -10px rgba(0,0,0,.35);
+    & > a {
+        text-decoration: none;
+        & * {
+            text-decoration: none;
+        }
+        &:hover, &:active, &:focus-visible, &:focus {
+            text-decoration: none;
+            & * {
+                text-decoration: none;
+            }
+        }
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        .logo-img {
+           height: 30px;
+        }
+        .logo-title {
+            color: black;
+            margin-left: 10px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    }
+    .username-block {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        border-radius: 24px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        .username {
+            margin-right: 4px;
+        }
+        // &:hover {
+        //     background-color: #292929;
+        // }
+    }
+    .MuiPaper-root  {
+        min-width: 100px;
+        background-color: #121212;
+        overflow: auto;
+        margin-top: 14px;
+        .MuiList-root {
+            padding: 4px 0px;
+            .MuiButtonBase-root {
+                color: rgb(224, 224, 224);
+                font-size: 12px;
+                padding: 5px 15px;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.08);
+                }
+                svg {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

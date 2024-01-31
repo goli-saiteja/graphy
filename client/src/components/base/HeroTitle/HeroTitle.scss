@@ -1,0 +1,21 @@
+@import 'global';
+
+.hero-title-container {
+	padding-top: 20px;
+	display: flex;
+	align-items: center;
+	.description {
+		color: $hero-title-color;
+		font-weight: 600;
+		font-size: 16px;
+		margin-left: 10px;
+		margin-top: 8px;
+	}
+	.title {
+		font-size: 30px;
+		font-weight: 700;
+	}
+	padding-bottom: 15px;
+    margin-bottom: 25px;
+	border-bottom: 1px solid $section-border-color;
+}

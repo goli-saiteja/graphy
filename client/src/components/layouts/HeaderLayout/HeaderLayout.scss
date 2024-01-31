@@ -1,0 +1,8 @@
+@import "global";
+
+.header-layout-container {
+    .main-container {
+        min-height: calc(100vh - $header-height);
+        overflow: auto;
+    }
+}

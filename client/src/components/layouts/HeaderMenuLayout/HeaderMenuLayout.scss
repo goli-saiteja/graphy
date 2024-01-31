@@ -1,0 +1,16 @@
+@import "global";
+
+.header-menu-layout-container {
+    .main-container {
+        height: calc(100vh - $header-height);
+        width: 100%;
+        display: flex;
+        .aside-container {
+            width: $left-menu-width;
+        }
+        .content-container {
+            width: calc(100% - $left-menu-width);
+            overflow: auto;
+        }
+    }
+}

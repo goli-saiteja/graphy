@@ -1,0 +1,36 @@
+@import 'global';
+
+.left-menu-container {
+	// background-color: $left-menu-bg;
+	height: 100%;
+	padding-top: 20px;
+	border-right: 1px solid $section-border-color;
+}
+.menu-item {
+	padding: 10px;
+	border-left: 3px solid transparent;
+	color: $left-menu-color;
+	display: flex;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+
+	.menu-icon {
+		display: flex;
+		font-size: 22px;
+	}
+	.menu-title {
+		display: flex;
+		margin-left: 8px;
+		font-weight: 500;
+		font-size: 1rem;
+	}
+	&:hover,
+	&.active {
+		border-color: $left-menu-active-color;
+		background-color: $left-menu-active-bg;
+		.menu-title {
+			color: $left-menu-active-color;
+		}
+	}
+}

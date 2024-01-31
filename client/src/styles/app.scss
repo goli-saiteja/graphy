@@ -1,0 +1,166 @@
+@import 'fonts';
+@import 'colors';
+* {
+	// font-family: 'SF Pro Display';
+	font-family: 'Neue Haas';
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: $color-black;
+}
+
+.noSelect {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.noSelect:focus {
+	outline: none !important;
+}
+.model-box {
+	.MuiDialog-container {
+		& > .MuiPaper-root {
+			border-radius: 25px;
+			max-width: 700px;
+			max-height: initial;
+		}
+	}
+}
+.delete-prompt {
+	.MuiPaper-root {
+		border-radius: 25px;
+		border-top: 2px solid #ff3a30;
+		& > .MuiTypography-root {
+			padding: 30px 20px 0px 20px;
+			text-align: center;
+			font-size: 22px;
+			font-weight: 500;
+		}
+		.MuiDialogContent-root {
+			padding: 0;
+			text-align: center;
+		}
+		.MuiDialogActions-root {
+			padding: 20px 30px;
+			border-top: 1px solid #d2d2d7;
+		}
+	}
+}
+iframe {
+	display: none;
+}
+.delete-prompt {
+	.MuiDialog-container {
+		.MuiPaper-root {
+			// display: grid;
+			// grid-template-columns: 360px auto;
+			.MuiDialogContent-root {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				h2 {
+					margin: 0;
+					padding: 40px 40px 0px 40px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				.MuiDialogContentText-root {
+					position: relative;
+					min-height: 70px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					svg {
+						position: absolute;
+						color: #FF5249;
+						left: 30px;
+						top: -50px;
+						display: none;
+					}
+				}
+				.header-id {
+					color: $highlight-text;
+					display: inline-block;
+					font-size: 16px;
+					margin-left: 10px;
+					margin-top: 3px;
+				}
+				.confirm-text {
+					font-weight: 600;
+				}
+			}
+			.MuiDialogActions-root {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-top: 0;
+				margin: 10px 0 20px 0;
+				padding-top: 0;
+				border-left: 1px solid #d2d2d7;
+				overflow: auto;
+				.agree,
+				.disagree {
+					font-size: 12px;
+					padding: 2px 10px;
+				}
+				.agree {
+					border: 1px solid $btn-danger;
+					background-color: $btn-danger;
+					color: white;
+					&:hover {
+						background-color: $btn-danger-hover;
+						border-color: $btn-danger-hover;
+					}
+					&.agree-loading {
+						color: $btn-danger-loading;
+					}
+				}
+				.disagree {
+					border: 1px solid $btn-danger;
+					color: $btn-danger;
+					background-color: white;
+					&:hover {
+						border-color: $btn-danger-hover;
+						color: $btn-danger-hover;
+					}
+				}
+			}
+		}
+	}
+}
+.add-application-modal, .edit-application-modal, .add-category-modal {
+	height: 100vh;
+	overflow: auto;
+	.MuiDialog-container {
+		height: auto;
+	}
+}
+
+.Toastify {
+	.Toastify__toast-body {
+		.toast-content {
+			display: flex;
+			align-items: start;
+			justify-content: flex-start;
+			flex-direction: column;
+			.header-id {
+				display: block;
+				width: 100%;
+				color: $highlight-text;
+			}
+		}
+	}
+}
